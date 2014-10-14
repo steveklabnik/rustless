@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Client` struct in crate `rustless`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Client">
+
+    <title>rustless::Client - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='index.html'>rustless</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='common/index.html'>common</a><a class='mod ' href='errors/index.html'>errors</a><a class='mod ' href='framework/index.html'>framework</a><a class='mod ' href='server_backend/index.html'>server_backend</a></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Api.html'>Api</a><a class='struct ' href='struct.Application.html'>Application</a><a class='struct current' href='struct.Client.html'>Client</a><a class='struct ' href='struct.Endpoint.html'>Endpoint</a><a class='struct ' href='struct.Media.html'>Media</a><a class='struct ' href='struct.Namespace.html'>Namespace</a><a class='struct ' href='struct.Response.html'>Response</a><a class='struct ' href='struct.Server.html'>Server</a><a class='struct ' href='struct.SimpleRequest.html'>SimpleRequest</a><a class='struct ' href='struct.Static.html'>Static</a><a class='struct ' href='struct.Valico.html'>Valico</a></div><div class='block trait'><h2>Traits</h2><a class='trait ' href='trait.Cookies.html'>Cookies</a><a class='trait ' href='trait.Nesting.html'>Nesting</a><a class='trait ' href='trait.Request.html'>Request</a></div><div class='block macro'><h2>Macros</h2><a class='macro ' href='macro.callback!.html'>callback!</a><a class='macro ' href='macro.edp_handler!.html'>edp_handler!</a><a class='macro ' href='macro.format_error!.html'>format_error!</a></div>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rustless</a>::<wbr><a class='struct' href=''>Client</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-6524' href='../src/rustless/src/framework/client.rs.html#15-21'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Client&lt;'a&gt; {
+    pub endpoint: &amp;'a <a class='struct' href='../rustless/struct.Endpoint.html' title='rustless::Endpoint'>Endpoint</a>,
+    pub request: &amp;'a mut <a class='trait' href='../rustless/trait.Request.html' title='rustless::Request'>Request</a>,
+    pub media: &amp;'a <a class='struct' href='../rustless/struct.Media.html' title='rustless::Media'>Media</a>,
+    pub ext: <a class='struct' href='../anymap/struct.AnyMap.html' title='anymap::AnyMap'>AnyMap</a>,
+    pub response: <a class='struct' href='../rustless/struct.Response.html' title='rustless::Response'>Response</a>,
+}</pre><h2 class='fields'>Fields</h2>
+<table><tr><td id='structfield.endpoint'><a class='stability Unmarked' title='No stability level'></a><code>endpoint</code></td><td></td></tr><tr><td id='structfield.request'><a class='stability Unmarked' title='No stability level'></a><code>request</code></td><td></td></tr><tr><td id='structfield.media'><a class='stability Unmarked' title='No stability level'></a><code>media</code></td><td></td></tr><tr><td id='structfield.ext'><a class='stability Unmarked' title='No stability level'></a><code>ext</code></td><td></td></tr><tr><td id='structfield.response'><a class='stability Unmarked' title='No stability level'></a><code>response</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><a class='stability Unmarked' title='No stability level'></a><code>impl&lt;'a&gt; <a class='struct' href='../rustless/struct.Client.html' title='rustless::Client'>Client</a>&lt;'a&gt;</code></h3><div class='impl-methods'><h4 id='method.new' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.new' class='fnname'>new</a>(endpoint: &amp;'a <a class='struct' href='../rustless/struct.Endpoint.html' title='rustless::Endpoint'>Endpoint</a>, request: &amp;'a mut <a class='trait' href='../rustless/trait.Request.html' title='rustless::Request'>Request</a>, media: &amp;'a <a class='struct' href='../rustless/struct.Media.html' title='rustless::Media'>Media</a>) -&gt; <a class='struct' href='../rustless/struct.Client.html' title='rustless::Client'>Client</a>&lt;'a&gt;</code></h4>
+<h4 id='method.status' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.status' class='fnname'>status</a>(&amp;mut self) -&gt; <a class='enum' href='../rustless/server_backend/status/enum.StatusCode.html' title='rustless::server_backend::status::StatusCode'>StatusCode</a></code></h4>
+<h4 id='method.set_status' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_status' class='fnname'>set_status</a>(&amp;mut self, status: <a class='enum' href='../rustless/server_backend/status/enum.StatusCode.html' title='rustless::server_backend::status::StatusCode'>StatusCode</a>)</code></h4>
+<h4 id='method.set_header' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_header' class='fnname'>set_header</a>&lt;H: <a class='trait' href='../rustless/server_backend/header/trait.Header.html' title='rustless::server_backend::header::Header'>Header</a>&gt;(&amp;mut self, header: H)</code></h4>
+<h4 id='method.set_json_content_type' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_json_content_type' class='fnname'>set_json_content_type</a>(&amp;mut self)</code></h4>
+<h4 id='method.set_content_type' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.set_content_type' class='fnname'>set_content_type</a>(&amp;mut self, mime: <a class='struct' href='../rustless/server_backend/mime/struct.Mime.html' title='rustless::server_backend::mime::Mime'>Mime</a>)</code></h4>
+<h4 id='method.error' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.error' class='fnname'>error</a>&lt;T: <a class='trait' href='../rustless/errors/trait.Error.html' title='rustless::errors::Error'>Error</a>&gt;(self, error: T) -&gt; ClientResult&lt;'a&gt;</code></h4>
+<h4 id='method.json' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.json' class='fnname'>json</a>(self, result: &amp;<a class='enum' href='http://doc.rust-lang.org/nightly/serialize/json/enum.Json.html' title='serialize::json::Json'>Json</a>) -&gt; ClientResult&lt;'a&gt;</code></h4>
+<h4 id='method.text' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.text' class='fnname'>text</a>(self, result: <a class='struct' href='http://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; ClientResult&lt;'a&gt;</code></h4>
+<h4 id='method.file' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.file' class='fnname'>file</a>(self, path: &amp;<a class='struct' href='http://doc.rust-lang.org/nightly/std/path/posix/struct.Path.html' title='std::path::posix::Path'>Path</a>) -&gt; ClientResult&lt;'a&gt;</code></h4>
+<h4 id='method.redirect' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.redirect' class='fnname'>redirect</a>(self, to: &amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; ClientResult&lt;'a&gt;</code></h4>
+<h4 id='method.permanent_redirect' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.permanent_redirect' class='fnname'>permanent_redirect</a>(self, to: &amp;<a href='http://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; ClientResult&lt;'a&gt;</code></h4>
+<h4 id='method.move_response' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.move_response' class='fnname'>move_response</a>(self) -&gt; <a class='struct' href='../rustless/struct.Response.html' title='rustless::Response'>Response</a></code></h4>
+<h4 id='method.ext' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.ext' class='fnname'>ext</a>(&amp;self) -&gt; &amp;<a class='struct' href='../anymap/struct.AnyMap.html' title='anymap::AnyMap'>AnyMap</a></code></h4>
+<h4 id='method.ext_mut' class='method'><a class='stability Unmarked' title='No stability level'></a><code>fn <a href='#method.ext_mut' class='fnname'>ext_mut</a>(&amp;mut self) -&gt; &amp;mut <a class='struct' href='../anymap/struct.AnyMap.html' title='anymap::AnyMap'>AnyMap</a></code></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rustless";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
